@@ -13,6 +13,7 @@ var counter = 0;
 
 const zeroPaddedNumber = (num) => {
   return sprintf('%05d', num);
+  console.log(num);
 };
 
 const readCounter = (callback) => {
@@ -38,9 +39,16 @@ const writeCounter = (count, callback) => {
 
 // Public API - Fix this function //////////////////////////////////////////////
 
-exports.getNextUniqueId = () => {
-  counter = counter + 1;
-  return zeroPaddedNumber(counter);
+exports.getNextUniqueId = (callback) => {
+  //read count from file
+  readCounter((err, count) => {
+    if (err) {
+      throw ('error retrieving count');
+    } else {
+      count++;
+      writeCounter(count, callback);
+    }
+  });
 };
 
 
