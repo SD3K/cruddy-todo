@@ -2,6 +2,8 @@ datastore/data/*
 datastore/counter.txt
 test/testData
 test/counterTest.txt
+package-lock.json
+
 
 ###OSX###
 
