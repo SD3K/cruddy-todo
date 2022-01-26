@@ -51,7 +51,9 @@ exports.getNextUniqueId = (callback) => {
   });
 };
 
-
+exports.reformatId = (id) => {
+  return zeroPaddedNumber(Number(id));
+};
 
 // Configuration -- DO NOT MODIFY //////////////////////////////////////////////
 
