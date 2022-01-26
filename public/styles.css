@@ -1,8 +1,10 @@
 body {
   margin : 20px;
   font-family: arial, sans-serif;
+  font-family: "Papyrus", fantasy;
 }
 
 .todo {
   padding: 3px;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
